@@ -36,3 +36,8 @@ Run the following while within the virtual environment shell:
 ```bash
 black ./
 ```
+
+## Loading dummy data
+```bash
+./manage.py loaddata fixtures.json
+```
