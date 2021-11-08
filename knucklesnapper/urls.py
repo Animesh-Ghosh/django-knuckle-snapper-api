@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from advisor_network.views import add_advisor
 
 urlpatterns = [
+    path("admin/advisor/", add_advisor),
+    path("user/<int:user_id>/", include("advisor_network.urls")),
     path("user/", include("auth.urls")),
     path("admin/", admin.site.urls),
 ]

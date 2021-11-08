@@ -58,4 +58,3 @@ def login(request):
         data={"id": user.id, "access_token": str(refresh.access_token)},
         status=status.HTTP_200_OK,
     )
-
